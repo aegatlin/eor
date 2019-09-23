@@ -1,0 +1,21 @@
+{
+  "name": "eor",
+  "version": "0.0.1",
+  "description": "Eor provides try-catch wrappers for promises, eorp, and functions, eorf.",
+  "main": "index.js",
+  "keywords": [
+    "try",
+    "catch",
+    "wrapper",
+    "promise",
+    "function",
+    "async",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.7.5",
+    "typescript": "^3.6.3"
+  }
+}
