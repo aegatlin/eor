@@ -1,20 +1,13 @@
 type Func<T> = (...args: any[]) => T
-type Tuple<T> = [Error | null, T | null]
+type Tuple<T> = [null, T] | [Error, null]
 
-export const eorf = <T>(func: Func<T>, ...args: any[]): Tuple<T> => {
+export function eor<T>(f: Func<T>, ...args: any[]): Tuple<T>
+export function eor<T>(p: Promise<T>): Promise<Tuple<T>>
+export function eor(forp, ...args) {
   try {
-    const data: T = func(...args)
-    return [null, data]
-  } catch (err) {
-    return [err, null]
-  }
-}
-
-export const eorp = async <T>(promise: Promise<T>): Promise<Tuple<T>> => {
-  try {
-    const data: T = await promise
-    return [null, data]
-  } catch (err) {
-    return [err, null]
+    if (typeof forp === 'function') return [forp(args), null]
+    return forp.then(data => [data, null])
+  } catch (e) {
+    return [e, null]
   }
 }

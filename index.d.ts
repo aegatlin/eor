@@ -1,4 +1,5 @@
 declare type Func<T> = (...args: any[]) => T;
-export declare const eorf: <T>(func: Func<T>, ...args: any[]) => [Error, T];
-export declare const eorp: <T>(promise: Promise<T>) => Promise<[Error, T]>;
+declare type Tuple<T> = [null, T] | [Error, null];
+export declare function eor<T>(f: Func<T>, ...args: any[]): Tuple<T>;
+export declare function eor<T>(p: Promise<T>): Promise<Tuple<T>>;
 export {};

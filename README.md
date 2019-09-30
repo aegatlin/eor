@@ -1,6 +1,6 @@
 # eor
 
-Eor exports two utilities, `eorp` and `eorf`, each of which return `[error, data]` tuples, hence the name "e or ?". `eorp` is a try-catch wrapper around promises. `eorf` is a try-catch wrapper around (synchronous) functions.
+Eor is a try-catch wrapper that returns an `[error, data]` tuple, hence the name "e or ?".
 
 ## Install
 
@@ -15,33 +15,13 @@ yarn add eor
 ## Usage
 
 ```typescript
-import { eorp, eorf } from 'eor'
-```
-
-### eorp
-
-```typescript
-const [err, data] = await eorp(myPromise())
-if (err) return
-return data
+import { eor } from 'eor'
 ```
 
 ```typescript
-const [err] = await eorp(myPromise())
-if (err) return
-doSomething()
-```
-
-### eorf
-
-```typescript
-const [err, data] = eorf(myFunction, inputOne, inputTwo)
-if (err) return
-return data
+const [err, data] = await eor(myPromise)
 ```
 
 ```typescript
-const [err] = eorf(myFunction, inputOne, inputTwo)
-if (err) return
-doSomething()
+const [err, data] = eor(myFunction, inputOne, inputTwo)
 ```
