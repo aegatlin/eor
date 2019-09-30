@@ -1,6 +1,6 @@
 {
   "name": "eor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Eor provides a try-catch wrapper which returns an [error, data] tuple for promises, eorp, and functions, eorf.",
   "main": "index.js",
   "keywords": [
