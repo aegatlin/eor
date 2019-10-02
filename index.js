@@ -7,7 +7,7 @@ function eor(forp) {
     }
     try {
         if (typeof forp === 'function')
-            return [forp(args), null];
+            return [forp.apply(void 0, args), null];
         return forp.then(function (data) { return [data, null]; });
     }
     catch (e) {

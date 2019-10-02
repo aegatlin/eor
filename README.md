@@ -2,6 +2,8 @@
 
 Eor is a try-catch wrapper that returns an `[error, data]` tuple, hence the name "e or ?".
 
+Eor is written in Typescript and utilizes the language's builtin type-safety and type-inference capabilities. That said, it is compiled to Javascript, so it will work in any Javascript ecosystem.
+
 ## Install
 
 ```bash
