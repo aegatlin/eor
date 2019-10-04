@@ -4,16 +4,18 @@
   "description": "Eor is a try-catch wrapper that returns an [error, data] tuple.",
   "main": "index.js",
   "keywords": [
+    "typescript",
     "try",
     "catch",
     "wrapper",
     "tuple",
     "error",
+    "or",
     "data",
     "promise",
-    "function",
     "async",
-    "typescript"
+    "await",
+    "function"
   ],
   "author": "Austin Gatlin",
   "license": "MIT",
