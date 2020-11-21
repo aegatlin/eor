@@ -2,7 +2,7 @@
   "name": "eor",
   "version": "0.1.5",
   "description": "Eor is a try-catch wrapper that returns an [error, data] tuple.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "keywords": [
     "typescript",
     "try",
