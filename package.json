@@ -20,7 +20,8 @@
   "author": "Austin Gatlin",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "pub": "npm version patch && npm publish && git push"
   },
   "repository": {
     "type": "git",
