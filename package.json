@@ -1,5 +1,6 @@
 {
   "name": "eor",
+  "type": "module",
   "version": "0.1.7",
   "description": "Eor is a try-catch wrapper that returns an [error, data] tuple.",
   "main": "dist/index.js",
@@ -9,23 +10,13 @@
     "catch",
     "wrapper",
     "tuple",
-    "error",
-    "or",
-    "data",
-    "promise",
-    "async",
-    "await",
-    "function"
+    "error"
   ],
   "author": "Austin Gatlin",
   "license": "MIT",
-  "prettier": {
-    "printWidth": 90,
-    "semi": false,
-    "singleQuote": true
-  },
   "scripts": {
-    "compile": "tsc",
+    "build": "tsc",
+    "watch": "npm run build -- --watch",
     "pub": "npm version patch && npm publish && git push"
   },
   "repository": {
@@ -37,8 +28,8 @@
   },
   "homepage": "https://github.com/aegatlin/eor#readme",
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
-    "@types/node": "^16.11.6",
-    "typescript": "^4.4.4"
+    "@types/node": "^18.7.14",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2"
   }
 }

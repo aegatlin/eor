@@ -2,6 +2,28 @@
 
 Eor is a try-catch wrapper that returns an `[error, data]` tuple.
 
+## Explanation
+
+```js
+function idk() {
+  try {
+    const data = getData()
+    return data
+  } catch (e) {
+    console.error(e)
+    return null
+  }
+}
+```
+
+## Tutorials
+
+
+
+## How-To Guides
+
+## Reference
+
 Eor, **e**rror **or**..., is written in Typescript and utilizes the language's builtin type-safety and type-inference capabilities. That said, it is compiled to Javascript, so it will work in any Javascript ecosystem.
 
 ## Installation
