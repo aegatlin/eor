@@ -1,7 +1,7 @@
 {
   "name": "eor",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Eor is a try-catch wrapper that returns an [error, data] tuple.",
   "main": "dist/index.js",
   "keywords": [
