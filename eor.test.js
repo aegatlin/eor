@@ -44,6 +44,9 @@ describe('eor', () => {
         })
       )
       assert.deepEqual(actual, ['bad', null])
+
+      const actual2 = await eor(Promise.reject('bad'))
+      assert.deepEqual(actual2, ['bad', null])
     })
   })
 

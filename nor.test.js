@@ -19,6 +19,18 @@ describe('nor', () => {
         null
       )
     })
+
+    it('handles parametered functions via a higher-order, parameterless function', () => {
+      const a = 1
+      const b = 2
+      const mightThrow = (a, b) => {
+        if (b === 2) {
+          throw 'bad'
+        } else return b
+      }
+      const actual = nor(() => mightThrow(a, b))
+      assert.equal(actual, null)
+    })
   })
 
   describe('asynchronous: function-promise', () => {
